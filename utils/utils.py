@@ -141,7 +141,7 @@ class F1MetricTag(object):
     BIO_match = re.compile(r'(?P<start>\d+)B-(?P<label>[a-z]+)\s(?:(?P<end>\d+)I-(?P=label)\s)*')
     IO_match = re.compile(r'(?P<start>\d+)I-(?P<label>[a-z]+)\s(?:(?P<end>\d+)I-(?P=label)\s)*')
 
-    def __init__(self, pad_value:int, ignore_labels:Optional[Union[int, List[int], Set[int]]], label2id:Dict[str, int], tokenizer:Optional[PreTrainedTokenizerFast]=None, save_dir:Optional[str]=None, save_output:bool=True, save_annotation:bool=True, return_annotation:bool=False) -> None:
+    def __init__(self, pad_value:int, ignore_labels:Optional[Union[int, List[int], Set[int]]], label2id:Dict[str, int], tokenizer:Optional[PreTrainedTokenizerFast]=None, fix_span=True, save_dir:Optional[str]=None, save_output:bool=True, save_annotation:bool=True, return_annotation:bool=False) -> None:
         if isinstance(ignore_labels, int):
             self.ignore_labels = {ignore_labels}
         elif ignore_labels is None:
@@ -151,6 +151,7 @@ class F1MetricTag(object):
         self.pad_value = pad_value
         self.save_dir = save_dir
         self.label2id = label2id
+        self.fix_span = fix_span
         self.id2nickname = {}
         self.nickname2label = {}
         self.id2tag = {}
@@ -173,7 +174,7 @@ class F1MetricTag(object):
     def _merge_consecutive_two_token(self, first_input_id:int, second_input_id:int):
         first_input_id = int(first_input_id)
         second_input_id = int(second_input_id)
-        if isinstance(self.tokenizer, transformers.RobertaTokenizerFast):
+        if isinstance(self.tokenizer, transformers.RobertaTokenizerFast) or isinstance(self.tokenizer, transformers.XLMRobertaTokenizerFast):
             return (not self.tokenizer.convert_ids_to_tokens(second_input_id).startswith(chr(288))) and \
                 self.tokenizer.convert_ids_to_tokens(first_input_id)[-1].isalpha() and \
                 self.tokenizer.convert_ids_to_tokens(second_input_id)[0].isalpha()
@@ -238,15 +239,35 @@ class F1MetricTag(object):
                 encoding = encodings[i]
             annotations = []
             for annotation in prediction:
+                # print(annotation)
                 start_pt = annotation[0]
                 end_pt = annotation[1]
-                if isinstance(encodings, list):
-                    start = encoding.token_to_chars(start_pt).start
-                    end = encoding.token_to_chars(end_pt-1).end
-                else:
-                    start = encodings.token_to_chars(i, start_pt).start
-                    end = encodings.token_to_chars(i, end_pt-1).end
-                annotations.append([start, end, annotation[2]])
+                try:
+                    if isinstance(encodings, list):
+                        start = encoding.token_to_chars(start_pt)
+                        if start is not None:
+                            start = start.start
+                        else:
+                            continue
+                        end = encoding.token_to_chars(end_pt-1)
+                        if end is not None:
+                            end = end.end
+                        else:
+                            continue
+                    else:
+                        start = encodings.token_to_chars(i, start_pt)
+                        if start is not None:
+                            start = start.start
+                        else:
+                            continue
+                        end = encodings.token_to_chars(i, end_pt-1)
+                        if end is not None:
+                            end = end.end
+                        else:
+                            continue
+                    annotations.append([start, end, annotation[2]])
+                except TypeError as e:
+                    continue
             if save:
                 fw.write(json.dumps({"annotations": annotations})+"\n")
             corpus_annotations.append(annotations)
@@ -255,6 +276,7 @@ class F1MetricTag(object):
     
     def fix_spans(self, predictions:List[Union[List[Tuple[int, int, str]], Set[Tuple[int, int, str]]]], encodings:List[BatchEncoding]) -> List[Set[Tuple[int, int, str]]]:
         fixed = []
+        print(len(encodings), len(predictions))
         for i, prediction in enumerate(predictions):
             encoding = encodings[i]
             input_ids = getattr(encoding, 'input_ids', getattr(encoding, 'ids', None))
@@ -284,7 +306,7 @@ class F1MetricTag(object):
                 labels = self._preprocess(labels)
                 labels = [self.collect_spans(label) for label in labels]
         
-        if self.tokenizer is not None and encodings is not None:
+        if self.fix_span and self.tokenizer is not None and encodings is not None:
             predictions = self.fix_spans(predictions, encodings)
         
         metric = F1Record()
@@ -319,6 +341,20 @@ class F1MetricTag(object):
             return metric, metric_by_label, annotations
         else:
             return metric, metric_by_label
+
+
+def simpleF1(outputs, *args, **kwargs):
+        pred = outputs["prediction"]
+        label = outputs["label"]
+        pred = torch.cat(pred, dim=0)
+        label = torch.cat(label, dim=0)
+        valid = (label > 0).long()
+        nmatch = torch.sum((pred == label).long() * valid)
+        ngold = torch.sum(valid)
+        npred = torch.sum((pred > 0).long())
+        record = F1Record()
+        record += np.array((ngold.item(), npred.item(), nmatch.item()))
+        return record, None
 
 class WSAnnotations(object):
     

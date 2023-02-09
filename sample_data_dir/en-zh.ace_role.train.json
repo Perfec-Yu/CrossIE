@@ -1,0 +1,23 @@
+[
+    {
+        "source": "en",
+        "target": "zh",
+        "en": "It is a huge sigh of relief , because it could have been much worse and <b>Baghdad</b> could have been a <a>war</a> theater with more destruction to property .",
+        "zh": "\u8fd9\u662f\u4e00\u4e2a\u5de8\u5927\u7684\u677e\u4e86\u4e00\u53e3\u6c14\uff0c\u56e0\u4e3a\u5b83\u672c\u6765\u53ef\u4ee5\u66f4\u7cdf\uff0c<b>\u5df4\u683c\u8fbe</b>\u53ef\u80fd\u662f\u4e00\u4e2a<a>\u6218\u4e89</a>\u5267\u9662\uff0c\u5bf9\u8d22\u4ea7\u9020\u6210\u66f4\u591a\u7684\u7834\u574f\u3002",
+        "role": "Place"
+    },
+    {
+        "source": "en",
+        "target": "zh",
+        "en": "The British said they had enough control over the area to begin <a>sending in</a>  <b>ships</b> .",
+        "zh": "\u82f1\u56fd\u4eba\u8bf4\u4ed6\u4eec\u5bf9\u8be5\u5730\u533a\u6709\u8db3\u591f\u7684\u63a7\u5236\u6743\uff0c\u53ef\u4ee5\u5f00\u59cb<a>\u6d3e\u9063</a> <b>\u8239\u53ea</b>\u3002",
+        "role": "Vehicle"
+    },
+    {
+        "source": "en",
+        "target": "zh",
+        "en": "By going into their territory and building these walls or building <b>settlements</b> -- pushing the Palestinians out and -- Palestinians -- fight -- with rocks and -- sticks and -- Israelis have their machine guns and bulldozers and -- I just -- t- really unpalatable that the -- whole idea , the -- the way they 're going about -- this thing and -- I do n't really feel qualified -- to say how it should be , but -- I -- see it -- being wrong to -- <a>hurt</a> children and -- innocent people .",
+        "zh": "\u901a\u8fc7\u8fdb\u5165\u4ed6\u4eec\u7684\u9886\u571f\u5e76\u5efa\u9020\u8fd9\u4e9b\u5899\u6216\u5efa\u9020<b>\u5b9a\u5c45\u70b9</b> -- \u5c06\u5df4\u52d2\u65af\u5766\u4eba\u8d76\u51fa\u53bb -- \u5df4\u52d2\u65af\u5766\u4eba -- \u7528\u77f3\u5934\u548c -- \u68cd\u68d2\u6253\u67b6 -- \u4ee5\u8272\u5217\u4eba\u6709\u4ed6\u4eec\u7684\u673a\u67aa\u548c\u63a8\u571f\u673a\u5e76\u4e14--\u6211\u53ea\u662f-- \u771f\u7684\u5f88\u8ba8\u538c--\u6574\u4e2a\u60f3\u6cd5\uff0c-- \u4ed6\u4eec\u7684\u884c\u4e8b\u65b9\u5f0f-- \u8fd9\u4ef6\u4e8b-- \u6211\u771f\u7684\u89c9\u5f97\u6ca1\u6709\u8d44\u683c-- \u8bf4\u5b83\u5e94\u8be5\u600e\u4e48\u505a\u662f\uff0c\u4f46\u662f - \u6211 - \u660e\u767d - <a>\u4f24\u5bb3</a>\u513f\u7ae5\u548c - \u65e0\u8f9c\u7684\u4eba\u662f\u9519\u8bef\u7684\u3002",
+        "role": "NA"
+    }
+]

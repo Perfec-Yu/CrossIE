@@ -1,0 +1,23 @@
+[
+    {
+        "source": "en",
+        "target": "zh",
+        "en": "The commitee action comes two days before House and Senate budget <b>conferees</b> are expected to begin <a>negotiating</a> differences in the respective proposals .",
+        "zh": "\u59d4\u5458\u4f1a\u884c\u52a8\u662f\u5728\u4f17\u8bae\u9662\u548c\u53c2\u8bae\u9662\u9884\u7b97<b>\u4e0e\u4f1a\u8005</b>\u9884\u8ba1\u5f00\u59cb<a>\u8c08\u5224</a>\u5404\u81ea\u63d0\u6848\u7684\u5206\u6b67\u524d\u4e24\u5929\u91c7\u53d6\u7684\u3002",
+        "role": "Entity"
+    },
+    {
+        "source": "en",
+        "target": "zh",
+        "en": "U.S. Defense Secretary Donald H. Rumsfeld discussed the resolution with Prime Minister Tony Blair and Defense Secretary <b>Geoff Hoon on</b> Friday as Rumsfeld <a>returned</a> from a tour of Iraq , Afghanistan and the Persian Gulf region .",
+        "zh": "\u5468\u4e94\uff0c\u7f8e\u56fd\u56fd\u9632\u90e8\u957f\u5510\u7eb3\u5fb7\u00b7H\u00b7\u62c9\u59c6\u65af\u83f2\u5c14\u5fb7 (Donald H. Rumsfeld) \u4e0e\u9996\u76f8\u6258\u5c3c\u00b7\u5e03\u83b1\u5c14 (Tony Blair) \u548c\u56fd\u9632\u90e8\u957f <b>\u6770\u592b\u00b7\u80e1\u6069</b> \u8ba8\u8bba\u4e86\u8be5\u51b3\u8bae\uff0c\u56e0\u4e3a\u62c9\u59c6\u65af\u83f2\u5c14\u5fb7 <a>\u7ed3\u675f\u4e86\u4f0a\u62c9\u514b\u3001\u963f\u5bcc\u6c57\u548c\u6ce2\u65af\u6e7e\u4e4b\u884c\u8fd4\u56de</a>\u5730\u533a \u3002",
+        "role": "NA"
+    },
+    {
+        "source": "en",
+        "target": "zh",
+        "en": "That means no <b>team</b> would own any player , and the owners would be free to <a>sign</a> whomever they 'd like using the \" fiscal restraint \" they all droned on and on about all year .",
+        "zh": "\u8fd9\u610f\u5473\u7740\u6ca1\u6709<b>\u7403\u961f</b>\u4f1a\u62e5\u6709\u4efb\u4f55\u7403\u5458\uff0c\u800c\u7403\u961f\u8001\u677f\u53ef\u4ee5\u81ea\u7531\u5730<a>\u7b7e\u4e0b</a>\u4efb\u4f55\u4ed6\u4eec\u60f3\u8981\u4f7f\u7528\u7684\u201c\u8d22\u653f\u9650\u5236\u201d\uff0c\u4ed6\u4eec\u4e00\u76f4\u5728\u4e0d\u505c\u5730\u558b\u558b\u4e0d\u4f11\u3002\u5e74 \u3002",
+        "role": "NA"
+    }
+]

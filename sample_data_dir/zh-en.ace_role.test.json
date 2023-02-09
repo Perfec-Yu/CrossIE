@@ -1,0 +1,23 @@
+[
+    {
+        "source": "zh",
+        "target": "en",
+        "zh": "\u968f\u540c\u4e8e\u6c38\u6ce2\u8bbf\u95ee\u7684\u5e7f\u5dde\u519b\u533a\u653f\u59d4\u5218\u4e66\u7530\u3001\u5170\u5dde\u519b\u533a\u526f\u53f8\u4ee4\u5458\u517c\u5170\u5dde\u519b\u533a\u7a7a\u519b\u53f8\u4ee4\u5458\u9a6c\u6653\u5929\u3001\u5357\u4eac\u519b\u533a\u653f\u6cbb\u90e8\u4e3b\u4efb\u5218\u6c38\u6cbb\u3001\u603b\u653f\u6cbb\u90e8\u79d8\u4e66\u957f\u7a0b\u5b9d\u5c71\u3001\u56fd\u9632\u90e8\u5916\u4e8b\u529e\u516c\u5ba4\u526f\u4e3b\u4efb\u5f20\u90a6\u680b\u7b49<b>\u540c\u673a</b><a>\u62b5\u4eac</a>\u3002",
+        "en": "Liu Shutian, Political Commissar of Guangzhou Military Region, Ma Xiaotian, Deputy Commander of Lanzhou Military Region and Air Force Commander of Lanzhou Military Region, Liu Yongzhi, Director of Political Department of Nanjing Military Region, Cheng Baoshan, Secretary General of General Political Department, Zhang Bangdong, Deputy Director of Foreign Affairs Office of the Ministry of National Defense, etc. >Same plane</b><a>arrive in Beijing</a>.",
+        "role": "Vehicle"
+    },
+    {
+        "source": "zh",
+        "target": "en",
+        "zh": "\u65b0\u534e\u793e\u5723\u5730\u4e9a\u54e5\uff11\uff12\u6708\uff11\uff11\u65e5\u7535\uff08\u8bb0\u8005\u4faf\u8000\u5176\uff09\u667a\u5229\u5723\u5730\u4e9a\u54e5\u4e0a\u8bc9\u6cd5\u9662\u7b2c\u4e94\u5ead\uff11\uff11\u65e5\u4e0b\u5348\u505a\u51fa<a>\u521d\u5ba1</a>\u88c1\u51b3\uff0c\u5ba3\u5e03\u63a5\u53d7\u524d\u519b\u653f\u5e9c<b>\u9886\u5bfc\u4eba</b>\u76ae\u8bfa\u5207\u7279\u8fa9\u62a4\u5f8b\u5e08\u56e2\u63d0\u51fa\u7684\u4e0a\u8bc9\uff0c\u63a8\u7ffb\u53e4\u65af\u66fc\u6cd5\u5b98\u672c\u6708\uff11\u65e5\u7b7e\u53d1\u7684\u5173\u4e8e\u5ba1\u5224\u76ae\u8bfa\u5207\u7279\u7684\u51b3\u5b9a\u3002",
+        "en": "Xinhua The appeal filed by Chet's defense lawyers overturned the decision issued by Judge Guzman on the 1st of this month on the trial of Pinochet.",
+        "role": "NA"
+    },
+    {
+        "source": "zh",
+        "target": "en",
+        "zh": "\u4e8c\u8bdd\u4e0d\u8bf4\u5c31\u62ff\u51fa\u533f\u85cf\u5728\u80cc\u540e\u7684<b>\u897f\u74dc\u5200</b>\u89c1\u4eba\u5c31<a>\u780d\u3002</a>\u4e00\u65f6\u95f4\u670d\u52a1\u4e2d\u5fc3\u804c\u5458\u56db\u5904\u5954\u9003\uff0c\u4f46\u5176\u4e2d\u4e00\u4eba\u56e0\u4e3a\u6ed1\u5012\u88ab\u6b79\u5f92\u780d\u4f24\u80cc\u90e8\u3002",
+        "en": "Without saying a word, he took out the <b>watermelon knife</b> hidden behind his back and <a>cut it when he saw it. </a>For a time, the service center staff ran around, but one of them was slashed in the back by the thugs for slipping.",
+        "role": "Instrument"
+    }
+]
